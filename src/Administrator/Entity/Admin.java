@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fpt.project.entity;
+package Administrator.Entity;
 
 /**
  *
  * @author Nam Nguyen
  */
-public class Account {
+public class Admin {
     private long id;
     private String account;
     private String password;
@@ -18,7 +18,7 @@ public class Account {
     private String status; // 0: không hoạt động , 1: có hoạt động
     private long AdminInforId;
 
-    public Account() {
+    public Admin() {
     }
 
     public long getId() {

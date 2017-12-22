@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fpt.project.view;
+package Administrator.view;
 
-import com.fpt.project.entity.Account;
+import Administrator.Entity.Admin;
 import java.util.HashMap;
 
 /**
@@ -13,7 +13,7 @@ import java.util.HashMap;
  * @author Nam Nguyen
  */
 public class ValidateLogin {
-    public HashMap<String, String> ValidateLoginAcc(Account acc){
+    public HashMap<String, String> ValidateLoginAcc(Admin acc){
          HashMap<String, String> errors = new HashMap<>();
           if (acc.getAccount().isEmpty()) {
             errors.put("txtAccount", "*Vui lòng nhập tài khoản!");

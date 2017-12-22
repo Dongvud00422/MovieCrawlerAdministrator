@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fpt.project.view;
+package Administrator.view;
 
-import com.fpt.project.entity.Account;
+import Administrator.Entity.Admin;
 import java.awt.Color;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
@@ -156,7 +156,7 @@ public class FormLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAccountActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        Account account = new Account();
+        Admin account = new Admin();
         account.setAccount(txtAccount.getText());
         account.setPassword(String.valueOf(txtPassword.getPassword()));
         HashMap<String, String> errors = new ValidateLogin().ValidateLoginAcc(account);
@@ -170,7 +170,8 @@ public class FormLogin extends javax.swing.JFrame {
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         FormRegister register = new FormRegister();
-         new FormLogin().setVisible(false);
+        register.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed

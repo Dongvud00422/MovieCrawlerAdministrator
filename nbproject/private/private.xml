@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/Controller/addMovie.java</file>
-            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/Helper/Vaildate.java</file>
+            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/Main/Run.java</file>
+            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/view/FormRegister.java</file>
+            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/validate/ValidateRegister.java</file>
+            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/view/ValidateLogin.java</file>
+            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/view/FormLogin.java</file>
+            <file>file:/Users/dongvu/NetBeansProjects/prj/src/Administrator/Entity/Account.java</file>
         </group>
     </open-files>
 </project-private>
