@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fpt.project.view;
+package Administrator.view;
 
-import com.fpt.project.entity.Account;
+import Administrator.validate.ValidateRegister;
+import Administrator.Entity.Admin;
 import com.fpt.project.entity.AdminInfor;
-import com.sun.corba.se.impl.util.Utility;
 import java.awt.Color;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
@@ -214,7 +214,7 @@ public class FormRegister extends javax.swing.JFrame {
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         ResetMessageRegister();
-        Account account = new Account();
+        Admin account = new Admin();
         AdminInfor adminInfor = new AdminInfor();
         account.setAccount(txtAccount.getText());
         account.setPassword(String.valueOf(txtPassword.getPassword()));
@@ -222,6 +222,7 @@ public class FormRegister extends javax.swing.JFrame {
         adminInfor.setBirthday(txtBirthday.getText());
         adminInfor.setEmail(txtEmail.getText());
         adminInfor.setPhoneNumber(txtPhoneNumber.getText());
+        JOptionPane.showConfirmDialog(null,txtPhoneNumber.getText());
         adminInfor.setAddress(txtAddress.getText());
         adminInfor.setGender(txtGender.getSelectedItem().toString());
         HashMap<String, String> errorsRegister = new ValidateRegister().ValidateRegisterAcc(account, adminInfor);
@@ -245,7 +246,9 @@ public class FormRegister extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-         
+         FormLogin login = new FormLogin();
+         login.setVisible(true);
+         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
     /**

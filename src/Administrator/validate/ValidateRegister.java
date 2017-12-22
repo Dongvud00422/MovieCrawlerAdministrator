@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fpt.project.view;
+package Administrator.validate;
 
-import com.fpt.project.entity.Account;
+import Administrator.Entity.Admin;
 import com.fpt.project.entity.AdminInfor;
 import com.fpt.project.validate.Validate;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import java.util.HashMap;
  */
 public class ValidateRegister {
 
-    public HashMap<String, String> ValidateRegisterAcc(Account account, AdminInfor adminInfor) {
+    public HashMap<String, String> ValidateRegisterAcc(Admin account,AdminInfor adminInfo) {
         HashMap<String, String> errorsRegister = new HashMap<>();
         if (account.getAccount().length() < 6) {
             errorsRegister.put("txtAccount", "*Tài khoản phải lớn hơn 6 kí tự! ");
@@ -24,25 +24,25 @@ public class ValidateRegister {
         if (account.getPassword().length() < 6) {
             errorsRegister.put("txtPassword", "*Mật khẩu phải lớn hơn 6 kí tự!");
         }
-        if (adminInfor.getFullName().isEmpty()) {
+        if (adminInfo.getFullName().isEmpty()) {
             errorsRegister.put("txtFullName", "*Vui lòng nhập họ và tên! ");
         }
-        if (adminInfor.getEmail().isEmpty()) {
+        if (adminInfo.getEmail().isEmpty()) {
             errorsRegister.put("txtEmail", "*Vui lòng nhập email!");
-        } else if (Validate.valiEmail(adminInfor.getEmail()) == false) {
+        } else if (Validate.valiEmail(adminInfo.getEmail()) == false) {
             errorsRegister.put("txtEmail", "*Nhập đúng định dạng email: abc@xyz.com");
         }
-        if (adminInfor.getPhoneNumber()== null) {
+        if (adminInfo.getPhoneNumber()== null) {
             errorsRegister.put("txtPhoneNumber", "*Vui lòng nhập số điện thoại!");
-        } else if (Validate.valiPhoneNumber(adminInfor.getPhoneNumber()) == false) {
+        } else if (Validate.valiPhoneNumber(adminInfo.getPhoneNumber()) == false) {
             errorsRegister.put("txtPhoneNumber", "*Nhập đúng định dạng số điện thoại: +841.. or +8491.. ");
         }
-        if (adminInfor.getBirthday().isEmpty()) {
+        if (adminInfo.getBirthday().isEmpty()) {
             errorsRegister.put("txtBirthday", "*Vui lòng nhập ngày sinh!");
-        } else if (Validate.valiBirthday(adminInfor.getBirthday()) == false) {
+        } else if (Validate.valiBirthday(adminInfo.getBirthday()) == false) {
             errorsRegister.put("txtBirthday", "*Nhập đúng định dạng ngày tháng: 13/12/1995 ");
         }
-        if (adminInfor.getAddress().isEmpty()) {
+        if (adminInfo.getAddress().isEmpty()) {
             errorsRegister.put("txtAddress", "*Vui lòng nhập địa chỉ!");
         }
         return errorsRegister;
